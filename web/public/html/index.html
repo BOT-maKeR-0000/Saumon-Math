@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
+    <script>
+        window.onload = () => {
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach((input) => {
+                input.oninput = () => {
+                    input.value = input.value.replace(/[^\d]/g, '');
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
