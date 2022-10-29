@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BOT-maKeR-0000/Saumon-Math.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BOT-maKeR-0000/Saumon-Math/issues"
+  },
+  "homepage": "https://github.com/BOT-maKeR-0000/Saumon-Math#readme"
+}
