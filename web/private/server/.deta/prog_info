@@ -1,1 +1,0 @@
-{"id":"34b1b05f-6714-4a14-a414-fcee75be49d8","space":29459,"runtime":"nodejs14.x","name":"server","path":"1kmhja","project":"a0pff3od","account":"144798365827","region":"eu-central-1","deps":["deta@^1.1.0","express@^4.18.2"],"envs":null,"public":true,"log_level":"off","cron":""}
