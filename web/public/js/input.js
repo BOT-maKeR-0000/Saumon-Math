@@ -1,8 +1,8 @@
-window.onload(() => {
-    let inputs = document.getElementsByTagName('input');
+window.onload = () => {
+    let inputs = document.querySelectorAll('input');
     inputs.forEach((input) => {
-        input.addEventListener('input', (e) => {
-            e.value = e.value.replace(/[^\d]/g, '');
+        input.oninput = () => {
+            input.value = input.value.replace(/[^\d]/g, '');
         }
     });
-});
+}
