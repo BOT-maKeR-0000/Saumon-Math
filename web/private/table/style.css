@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* All */
+
+html{
+    margin-block: 5;
+    block-size: auto;
+}
+
+:root{
+    --color-primary: #F5F5F5;
+    --color-secondary: #048b9a;
+    --color-secondary-hover: #06a1b3;
+    --color-text: #1F1F1F;
+    --color-link: #463e98;
+    --color-link-hover: #6b5fec;
+    --color-danger: #f44336;
+    --color-success: #4caf50;
+    --color-warning: #ff9800;
+    --color-background: #F5F5F5;
+    --color-header: #F5F5F5;
+    --color-border: #414040;
+
+    --font-primary: 'Comfortaa', cursive;
+    --font-secondary: 'Comfortaa', cursive;
+    --font-title: 'Comfortaa', cursive;
+    --font-special: 'Comfortaa', cursive;
+
+    --default: 0;
+    --transition: 0.3s ease-in-out;
+}
+
+
+/* ########### Style ########### */
+
+
+/* ------ Button ------ */
+
+/* basic */
+
+.button-enter {
+
+}
+
+.button-skip { 
+
+}
+
+.button-menu {
+
+}   
+
+/* user connexion */
+
+.button-round {
+
+}
+
+.button-round .login {
+
+}
+
+.button-round .logout {
+
+}
+
+/* ------ Input ------ */
+
+.small-input {
+
+}
+
+.large-input {
+    
+}
