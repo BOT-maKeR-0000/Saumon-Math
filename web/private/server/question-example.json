@@ -1,0 +1,19 @@
+{
+    "variables": {
+        "val1": {
+            "type": "number",
+            "range": "3-100"
+        },
+        "val2": {
+            "type": "number",
+            "range": "3-100"
+        }
+    },
+    "scheme": "{val1} + {val2}",
+    "result": {
+        "type": "number",
+        "range": "6-200",
+        "value": "val1+val2"
+    },
+    "weight": 1
+}
