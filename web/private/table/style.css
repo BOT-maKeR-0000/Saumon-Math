@@ -2,9 +2,12 @@
 
 /* All */
 
+*{
+    margin: 2.5em;
+    font-family: var(--font-primary);
+}
 
 body{
-    margin: 2.5em;
     padding: 0;
     width: 100%;
     height: 100vh;
@@ -47,10 +50,10 @@ body{
     width: auto;
     padding-inline: 20px;
     height: 40px;
-    border: 1px solid var(--color-border);
+    border: none;
     outline: none;
-    color: var(--color-primary);
-    background: linear-gradient(32deg, rgba(4,139,154,1) 0%, rgba(9,92,121,1) 44%, rgba(42,0,255,1) 100%);
+    color: var(--color-text);
+    background: var(--color-primary);
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -58,12 +61,103 @@ body{
     transition: var(--transition);
 }
 
-.button-enter:hover{
-    background: linear-gradient(32deg, rgba(4,139,154,1) 0%, rgba(9,92,121,1) 84%, rgba(42,0,255,1) 100%);
+.button-enter:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
 }
 
-.button-skip { 
+.button-enter:active {
+    color: #000
+}
 
+.button-enter:active:after {
+    background: #fff;
+}
+
+.button-enter:hover:before {
+    opacity: 1;
+}
+
+.button-enter:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    border: 1px solid #1f1f1f;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.button-skip {
+    width: auto;
+    padding-inline: 20px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: var(--color-text);
+    background: var(--color-primary);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.button-skip:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button-skip:active {
+    color: #000
+}
+
+.button-skip:active:after {
+    background: #fff;
+}
+
+.button-skip:hover:before {
+    opacity: 1;
+}
+
+.button-skip:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    border: 1px solid #1f1f1f;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
 }
 
 .button-menu {
@@ -107,7 +201,7 @@ body{
 }
 
 .glow-on-hover:active:after {
-    background: transparent;
+    background: #fff;
 }
 
 .glow-on-hover:hover:before {
@@ -125,6 +219,22 @@ body{
     left: 0;
     top: 0;
     border-radius: 10px;
+}
+
+/* RGB text */
+
+.rgb{
+    background: -webkit-linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+
+    filter: blur(0.05px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+
+    transition: opacity .3s ease-in-out;
 }
 
 @keyframes glowing {
