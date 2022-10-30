@@ -8,19 +8,33 @@
     <link href="./style.css" rel="stylesheet">
 
     <title>Table</title>
+
+    <script>
+        window.onload = () => {
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach((input) => {
+                input.oninput = () => {
+                    input.value = input.value.replace(/[^\d]/g, '');
+                    if(input.value.length > 11) input.value = input.value.slice(0, 11);
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
-    
-    <button class="button" type="button">HOVER ME, THEN CLICK ME!</button>
 
-    <input class="small-input">
+    <div class="content">
+     
+        <h1 class="rgb">Exercice 1</h1>
 
-    <button class="button" type="button">ENTER --></button>
+        <button class="button" type="button">HOVER ME, THEN CLICK ME!</button>
 
-    <p class="rgb">Coucou la zone !</p>
+        <input class="small-input">
 
-    
+        <button class="button" type="button">ENTER --></button>
+
+    </div>
 
 </body>
 
