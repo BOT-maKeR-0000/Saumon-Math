@@ -192,3 +192,7 @@ body{
 .input:-ms-input-placeholder  {
     font-size: medium;
 }
+
+.icons{
+    margin: 0;padding: 0;
+}
