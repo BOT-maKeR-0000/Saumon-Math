@@ -34,7 +34,7 @@ body{
     --color-link: #463e98;
     --color-link-hover: #6b5fec;
     --color-danger: #f44336;
-    --color-success: #4caf50;
+    --color-success: #24d62a;
     --color-warning: #ff9800;
     --color-background: #F5F5F5;
     --color-header: #F5F5F5;
@@ -139,15 +139,23 @@ body{
 /* user connexion */
 
 .button-round {
-
+    border: 1px solid #1F1F1F;
+    color: #1F1F1F;
+    border-radius: 100%;
+    background: #F5F5F5;
+    height: 40px;
+    width: 40px;
+    transition: background, color, .3s ease-in-out;
 }
 
-.button-round .login {
-
+.button-round.no:hover{
+    color: #1F1F1F;
+    background: var(--color-danger);
 }
 
-.button-round .logout {
-
+.button-round.yes:hover{
+    color: #1F1F1F;
+    background: var(--color-success);
 }
 
 /* ------ Input ------ */
