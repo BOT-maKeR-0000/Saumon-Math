@@ -29,6 +29,12 @@ async function parseDirectory(relativePath, pathModifier) {
          //Chek if file is a directory
          fs.stat(path.join(absolutePath, file), (err, stats) => {
             if (stats.isDirectory()) return parseDirectory(path.join(relativePath, file), pathModifier + file + '/');
+            if (file == "index.html") {
+               return app.get(pathModifier, (req, res) => {
+                  res.type(path.extname(file));
+                  res.sendFile(path.join(absolutePath, file));
+               });
+            }
             app.get(pathModifier + file, (req, res) => {
                res.type(path.extname(file));
                res.sendFile(path.join(absolutePath, file));

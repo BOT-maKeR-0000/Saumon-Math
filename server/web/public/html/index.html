@@ -5,19 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <script>
-        window.onload = () => {
-            let inputs = document.querySelectorAll('input');
-            inputs.forEach((input) => {
-                input.oninput = () => {
-                    input.value = input.value.replace(/[^\d]/g, '');
-                    if(input.value.length > 11) input.value = input.value.slice(0, 11);
-                }
-            });
-        }
-    </script>
+    <script src="/js/input.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-</head>
+</head> 
 
 <body>
     
